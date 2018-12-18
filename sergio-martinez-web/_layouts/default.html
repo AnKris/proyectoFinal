@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="" href="https://yarnpkg.com/en/package/normalize.css">
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <script src="/js/moment-with-locales.min.js"></script>
+    <script src="/js/main.js"></script>
+    <link rel="stylesheet" href="/css/sass/main.css">
+    <title> Sergio Martinez | {{ page.title}} </title>
+</head>
+<body>
+    <div id="app">
+    <header class="header">
+        <nav class="main-menu flex justify-between container">
+            <div class="logo">
+                <div class="logo_title text-3xl font-bold"><a class="link" href="/">S.</a></div>
+            </div>
+            <div class="menu">
+                <ul class="menu-list list-reset flex">
+                    <li class="mx-2 link"><a class="link-item" href="/about/">About</a></li>
+                    <li class="mx-2 link"><a class="link-item" href="/contact/">Contact</a></li>
+                    <li class="mx-2 link"><a class="link-item" href="/portfolio/">Portfolio</a></li>
+                    <li class="mx-2 link"><a class="link-item" href="/blog/">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        {{ content }}
+    </main>
+    <footer class="text-center">
+        &copy;2018 Sergio Martinez
+    </footer>
+</div>
+</body>
+</html>
