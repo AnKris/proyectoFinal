@@ -1,3 +1,5 @@
+*
+    scroll-behavior: smooth
 #carrousel
     height: 100vh
     width: 100vw
@@ -5,3 +7,79 @@
         image: url(../../img/slider1.jpg)
         size: cover
     transition: .2s all
+
+.carrousel
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.hero_title
+    font-size: 4.5rem
+
+.hero_subtitle
+    font-weight: 100
+    letter-spacing: 11px
+
+.hero_arrow
+    position: absolute
+    bottom: 30px
+    font-size: 2.5rem
+    animation-name: arrow
+    animation-duration: .8s
+    animation-iteration-count: infinite
+    animation-direction: alternate
+    &:hover
+        animation: none
+        bottom: 25px
+        a
+            transition: .2s all
+            color: $color-secundario
+
+// -- End Hero --
+
+.section_title
+    text-align: left
+    font-size: 2.5rem
+    margin-top: 3rem
+
+.title_border
+    height: 4px
+    background: $color-principal
+    width: 50px
+    margin-bottom: 3rem
+
+.about_block
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+.about_descirpcion
+    margin: auto
+    margin-right: 2rem
+
+.skills_item
+    width: 33rem
+    background: #d8d8d8
+
+.skills_bar
+    background: $color-secundario
+
+.skills_data
+    display: flex
+    justify-content: space-between
+
+.sub
+    display: flex
+
+.skills_name
+    padding: .4rem
+    padding-left: 1rem
+    padding-right: 1rem
+    background-color: darken($color-secundario, 10)
+    color: white
+
+.skills_percent
+    padding: .4rem
+#html_bar
+    width: 18rem

@@ -1,3 +1,11 @@
+@keyframes arrow {
+  0% {
+    bottom: 25px; }
+  100% {
+    bottom: 35px; } }
+* {
+  scroll-behavior: smooth; }
+
 #carrousel {
   height: 100vh;
   width: 100vw;
@@ -5,9 +13,86 @@
   background-size: cover;
   transition: 0.2s all; }
 
+.carrousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.hero_title {
+  font-size: 4.5rem; }
+
+.hero_subtitle {
+  font-weight: 100;
+  letter-spacing: 11px; }
+
+.hero_arrow {
+  position: absolute;
+  bottom: 30px;
+  font-size: 2.5rem;
+  animation-name: arrow;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
+  .hero_arrow:hover {
+    animation: none;
+    bottom: 25px; }
+    .hero_arrow:hover a {
+      transition: 0.2s all;
+      color: #FF7043; }
+
+.section_title {
+  text-align: left;
+  font-size: 2.5rem;
+  margin-top: 3rem; }
+
+.title_border {
+  height: 4px;
+  background: #202020;
+  width: 50px;
+  margin-bottom: 3rem; }
+
+.about_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+
+.about_descirpcion {
+  margin: auto;
+  margin-right: 2rem; }
+
+.skills_item {
+  width: 33rem;
+  background: #d8d8d8; }
+
+.skills_bar {
+  background: #FF7043; }
+
+.skills_data {
+  display: flex;
+  justify-content: space-between; }
+
+.sub {
+  display: flex; }
+
+.skills_name {
+  padding: 0.4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #ff4910;
+  color: white; }
+
+.skills_percent {
+  padding: 0.4rem; }
+
+#html_bar {
+  width: 18rem; }
+
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: #202020; }
 
 .header {
   position: fixed;
@@ -30,13 +115,13 @@ body {
   margin-right: 1rem;
   padding: 5px;
   text-decoration: none;
-  color: #121212; }
+  color: #202020; }
 
 .link-item {
   text-decoration: none;
-  color: #121212; }
+  color: #202020; }
   .link-item:hover {
-    border-bottom: 1px solid #121212;
+    border-bottom: 1px solid #202020;
     transition: 0.4s all; }
 
 /*# sourceMappingURL=main.css.map */
