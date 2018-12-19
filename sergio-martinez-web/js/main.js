@@ -18,5 +18,24 @@ document.addEventListener('DOMContentLoaded', function () {
   // Events
   slider();
   //// End Slider
+  //// Start Scroll
+  let navbar = document.querySelector('#navbar')
+  let prevScrollpos = window.pageYOffset;
+
+  window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      navbar.style.top = "0";
+    } else {
+      navbar.style.top = "-75px";
+    }
+    console.log(currentScrollPos)
+    if (currentScrollPos > '150'){
+      navbar.classList.add('header_background')
+    } else
+      navbar.classList.remove('header_background')
+  prevScrollpos = currentScrollPos;
+}
+  //// End Scroll
   //// End Home
 });
