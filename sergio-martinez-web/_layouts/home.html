@@ -15,7 +15,7 @@ layout: default
         <div class="title_border"></div>
         <div class="about_block">
             <div class="about_descirpcion">
-                <div class="about_pregunta">¿Quien es Sergio Martinez?</div>
+                <div class="about_pregunta">¿Quién es Sergio Martinez?</div>
                 <div class="about_respuesta">Soy Front-End Developer por cuenta porpia y amante del desarrollo Web. Me encanta descubir y exprimir nuevas tecnologias, pero siempre con el mismo proposito: construir interfaces dinamicas, faciles de usar e intuitivas para el usuario final aplicando conocimientos de UX/UI. Disfruto de los retos y aventurarme en grandes proyectos, <a href="#contact" class="link_ancla">me encantaria escuchar tu propuesta</a></div>
             </div>
             <div class="about_skills">
@@ -95,8 +95,9 @@ layout: default
         </div>
     </div>
     <!-- End About-->
+    <!-- Start trabajos-->
     <div id="trabajos">
-        <div class="container">
+        <div class="container container_trabajos">
             <div class="trabajos_title section_title">¿QUE PUEDO HACER?</div>
             <div class="title_border"></div>
             <div class="trabajos_items">
@@ -108,28 +109,47 @@ layout: default
                     </div>
                 </div>
                 <div class="trabajos_ejemplos">
-                    <div class="icono"><i class="fas fa-scroll"></i></div>
+                    <div class="icono"><i class="fas fa-mobile-alt"></i></div>
                     <div class="trabajos_content">
-                        <div class="trabajos_titulo">Landing pages</div>
-                        <div class="trabajos_descripcion">Webs de una o pocas paginas, con un diseño elegante y responsive donde se condense la información más importante sobre tu sitio</div>
+                        <div class="trabajos_titulo">Aplicaciones</div>
+                        <div class="trabajos_descripcion">Podemos contruir tanto aplicaciones web como aplicaciones para smpartphon compatibles con los sistemas operativos más usados</div>
                     </div>
                 </div>
                 <div class="trabajos_ejemplos">
-                    <div class="icono"><i class="fas fa-scroll"></i></div>
+                    <div class="icono"><i class="fas fa-sitemap"></i></div>
                     <div class="trabajos_content">
-                        <div class="trabajos_titulo">Landing pages</div>
-                        <div class="trabajos_descripcion">Webs de una o pocas paginas, con un diseño elegante y responsive donde se condense la información más importante sobre tu sitio</div>
+                        <div class="trabajos_titulo">A partir de APIs</div>
+                        <div class="trabajos_descripcion">La información no sirve para nada si no puedes acceder a ella de una forma sencilla, por eso podemos contruir tus sitios a partir de la información para que sea accesible y facil de usar</div>
                     </div>
                 </div>
                 <div class="trabajos_ejemplos">
-                    <div class="icono"><i class="fas fa-scroll"></i></div>
+                    <div class="icono"><i class="fas fa-mail-bulk"></i></div>
                     <div class="trabajos_content">
-                        <div class="trabajos_titulo">Landing pages</div>
-                        <div class="trabajos_descripcion">Webs de una o pocas paginas, con un diseño elegante y responsive donde se condense la información más importante sobre tu sitio</div>
+                        <div class="trabajos_titulo">Campañas por e-mail</div>
+                        <div class="trabajos_descripcion">Hoy en dia una buena campaña de newsletter lo es todo, y desde aquí te ayudamos desde los diseños y las listas hasta su distubución</div>
                     </div>
                 </div>
             </div>
+            <div class="trabajos_propuestas">Pero si tienes otras propuestas no dudes en contármelo</div>
+            <a href="#contacto" class="boton trabajos_boton">¿Que tienes en mente?</a>
         </div>
     </div>
-    <!-- Start trabajos-->
+    <!-- Ende trabajos-->
+    <!-- Start contacto -->
+    <div id="contacto">
+        <div class="container">
+            <div class="section_title contacto_title">Contacto</div>
+            <div class="title_border"></div>
+            <form class="contacto_form">
+                <input type="text" class="contacto_input" id="contacto_nombre" placeholder="Tu nombre">
+                <p class="error_contacto" id="error_nombre"></p>
+                <input type="email" class="contacto_input" id="contacto_email" placeholder="Tu correo electronico">
+                <p class="error_contacto" id="error_email"></p>
+                <textarea id="contacto_texto" cols="30" rows="10" placeholder="Escribe todo lo que quieras"></textarea>
+                <p class="error_contacto" id="error_mensaje"></p>
+                <button class="boton boton_contacto boton_enviar_disabled" id="boton_enviar">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <!-- End contacto -->
 </main>

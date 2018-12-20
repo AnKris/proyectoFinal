@@ -130,10 +130,60 @@
   width: 17rem; }
 
 #trabajos {
-  background-color: #f1f1f1; }
+  background-color: #f1f1f1;
+  padding-bottom: 3.5rem; }
+
+.container_trabajos {
+  text-align: center; }
 
 .trabajos_title {
   padding-top: 5rem; }
+
+.trabajos_items {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start; }
+
+.trabajos_ejemplos {
+  max-width: 280px; }
+
+.icono {
+  font-size: 3rem;
+  color: #FF7043;
+  text-align: center;
+  margin: 2rem; }
+
+.trabajos_titulo {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 1rem; }
+
+.trabajos_descripcion {
+  text-align: justify;
+  padding: 1rem; }
+
+.trabajos_propuestas {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 4rem; }
+
+.boton {
+  padding: 1rem 2rem;
+  border: 1px solid #FF7043;
+  color: #FF7043;
+  font-size: 1.2rem;
+  transition: 0.2s all; }
+  .boton:hover {
+    background: #FF7043;
+    color: white; }
+
+.trabajos_boton {
+  text-align: center;
+  margin-top: 2rem;
+  text-decoration: none; }
 
 body {
   margin: 0;
