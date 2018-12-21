@@ -185,6 +185,65 @@
   margin-top: 2rem;
   text-decoration: none; }
 
+#contacto {
+  padding-bottom: 3rem; }
+
+.input_group {
+  display: flex;
+  justify-content: center; }
+
+.input_subgroup {
+  margin: 2rem; }
+
+.contacto_input {
+  outline: none;
+  border-bottom: 1px solid #FF7043;
+  width: 20rem; }
+
+.contacto_form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; }
+
+.contacto_texto {
+  width: 44rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+
+.posts_section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 3rem;
+  flex-wrap: wrap; }
+
+.post_item {
+  max-width: 20rem;
+  padding: 2rem; }
+
+.post_title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem; }
+  .post_title:hover a {
+    color: #FF7043; }
+
+.post_date {
+  margin-top: 0.5rem;
+  color: #a9a9a9; }
+
+.post {
+  margin-top: 5rem;
+  margin-right: 10%;
+  margin-left: 10%;
+  padding-bottom: 5rem; }
+
+.dt-published {
+  color: #aeaeae; }
+
+.post-content {
+  margin-top: 3rem; }
+
 body {
   margin: 0;
   padding: 0;
@@ -226,5 +285,11 @@ body {
 .header_background {
   background: white;
   transition: 0.2s all; }
+
+.footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #FF7043;
+  color: white; }
 
 /*# sourceMappingURL=main.css.map */

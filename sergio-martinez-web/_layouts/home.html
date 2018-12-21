@@ -140,15 +140,21 @@ layout: default
         <div class="container">
             <div class="section_title contacto_title">Contacto</div>
             <div class="title_border"></div>
-            <form class="contacto_form">
-                <input type="text" class="contacto_input" id="contacto_nombre" placeholder="Tu nombre">
-                <p class="error_contacto" id="error_nombre"></p>
-                <input type="email" class="contacto_input" id="contacto_email" placeholder="Tu correo electronico">
-                <p class="error_contacto" id="error_email"></p>
-                <textarea id="contacto_texto" cols="30" rows="10" placeholder="Escribe todo lo que quieras"></textarea>
+            <div class="contacto_form">
+                <div class="input_group">
+                    <div class="input_subgroup">
+                    <input type="text" class="contacto_input" id="contacto_nombre" placeholder="Tu nombre">
+                    <p class="error_contacto" id="error_nombre"></p>
+                    </div>
+                    <div class="input_subgroup">
+                    <input type="email" class="contacto_input" id="contacto_email" placeholder="Tu correo electronico">
+                    <p class="error_contacto" id="error_email"></p>
+                    </div>
+                </div>
+                <textarea class="contacto_input contacto_texto" id="contacto_texto" cols="30" rows="10" placeholder="Escribe todo lo que quieras"></textarea>
                 <p class="error_contacto" id="error_mensaje"></p>
                 <button class="boton boton_contacto boton_enviar_disabled" id="boton_enviar">Enviar</button>
-            </form>
+            </div>
         </div>
     </div>
     <!-- End contacto -->

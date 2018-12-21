@@ -1,10 +1,17 @@
 ---
 layout: default
 ---
-<h1>Blog</h1>
-    <ul>
+<div class="container">
+<h1 class="section_title">Blog</h1>
+<div class="section_border"></div>
+<div class="posts_section">
         {% for post in site.posts %}
-            <li><a href="{{ post.url }}" target="blank"> {{ post.title }} </a></li>
+            <div class="post_item">
+                <h1 class="post_title"> <a href="{{ post.url }}" class="link"> {{ post.title }}</a></h1>
+                <p class="post_description">{{ post.excerpt }}</p>
+                <p class="post_date"> {{ post.date }} </p>
+            </div>
         {% endfor %}
-    </ul>
+</div>
+</div>
 <a href="/">Home</a>

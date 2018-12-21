@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       navbar.style.top = "-75px";
     }
-    console.log(currentScrollPos)
     // Hacemos que el bg del menu sea blanco cuando pase de 150 px de scroll
     if (currentScrollPos > '150'){
       navbar.classList.add('header_background')
