@@ -4,8 +4,8 @@ layout: default
 <!-- Start hero -->
 <main>
     <div id="carrousel" class="carrousel">
-        <h1 class="hero_title">Front-End Developer</h1>
-        <h2 class="hero_subtitle">Internet lo construimos todos</h2>
+        <h1 class="hero_title fadein downShow">Front-End Developer</h1>
+        <h2 class="hero_subtitle fadein">Internet lo construimos todos</h2>
         <div class="hero_arrow"> <a class="link" href="#about"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
     <!-- End hero -->
@@ -16,7 +16,7 @@ layout: default
         <div class="about_block">
             <div class="about_descirpcion">
                 <div class="about_pregunta">¿Quién es Sergio Martinez?</div>
-                <div class="about_respuesta">Soy Front-End Developer por cuenta porpia y amante del desarrollo Web. Me encanta descubir y exprimir nuevas tecnologias, pero siempre con el mismo proposito: construir interfaces dinamicas, faciles de usar e intuitivas para el usuario final aplicando conocimientos de UX/UI. Disfruto de los retos y aventurarme en grandes proyectos, <a href="#contact" class="link_ancla">me encantaria escuchar tu propuesta</a></div>
+                <div class="about_respuesta">Soy Front-End Developer por cuenta porpia y amante del desarrollo Web. Me encanta descubir y exprimir nuevas tecnologias, pero siempre con el mismo proposito: construir interfaces dinamicas, faciles de usar e intuitivas para el usuario final aplicando conocimientos de UX/UI. Disfruto de los retos y aventurarme en grandes proyectos, <a href="#contacto" class="link_ancla">me encantaria escuchar tu propuesta</a></div>
             </div>
             <div class="about_skills">
                 <div class="skills_item">
@@ -151,11 +151,20 @@ layout: default
                     <p class="error_contacto" id="error_email"></p>
                     </div>
                 </div>
-                <textarea class="contacto_input contacto_texto" id="contacto_texto" cols="30" rows="10" placeholder="Escribe todo lo que quieras"></textarea>
-                <p class="error_contacto" id="error_mensaje"></p>
+                <textarea class="contacto_input contacto_texto error_input_contacto" id="contacto_texto" cols="30" rows="10" placeholder="Escribe todo lo que quieras"></textarea>
+                <p class="error_contacto" id="error_mensaje">Necesito saber en que te puedo ayudar</p>
                 <button class="boton boton_contacto boton_enviar_disabled" id="boton_enviar">Enviar</button>
             </div>
         </div>
     </div>
+    <div class="posts_section">
+        {% for post in paginator.posts %}
+            <div class="post_item">
+                <h1 class="post_title"> <a href="{{ post.url }}" class="link"> {{ post.title }}</a></h1>
+                <p class="post_description">{{ post.excerpt }}</p>
+                <p class="post_date"> {{ post.date }} </p>
+            </div>
+        {% endfor %}
+</div>
     <!-- End contacto -->
 </main>

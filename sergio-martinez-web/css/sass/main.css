@@ -1,8 +1,19 @@
+.fadein {
+  animation-name: fadein;
+  animation-duration: 1.2s; }
+
 @keyframes arrow {
   0% {
     bottom: 25px; }
   100% {
     bottom: 35px; } }
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 * {
   scroll-behavior: smooth; }
 
@@ -207,9 +218,19 @@
   justify-content: center; }
 
 .contacto_texto {
-  width: 44rem;
-  margin-top: 3rem;
+  width: 50rem;
+  margin-top: 3rem; }
+
+.error_contacto {
+  font-weight: lighter;
+  color: #f95454;
+  margin-top: 5px; }
+
+#error_mensaje {
   margin-bottom: 3rem; }
+
+.contacto_input_error {
+  border: 1px solid #f95454; }
 
 .posts_section {
   display: flex;

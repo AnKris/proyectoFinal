@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let urlAirtable = 'https://api.airtable.com/v0/app08dS8leKzscnpT/Table%201?api_key=keyRjKxCGZreLL5BN'
 // Funciones
 // Comprobamos que el nombre tenga al menos 3 caracteres para podrse enviar
-  let comrobarNombre = () => {
+  let comprobarNombre = () => {
     if (nombre.value.length < 3) {
       nombre.classList.add('contacto_input_error');
       errorNombre.textContent = 'Es necesario un nombre con al menos 3 caracteres';
@@ -65,23 +65,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   // Comprobamos que el email sea valido para poderse enviar
-  let comprobarEmail = () => {
-    let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email.value)
-    emailIncorrecto()
+  let comprobarEmail = (correo) => {
+    if (email.value.length == 0) {
+      return false
+    } else {
+      var re = /\S+@\S+\.\S+/;
+      return re.test(correo);
+    }
   }
   // Si el email no es valido que se vea
   let emailIncorrecto = () => {
-    if (!comprobarEmail) {
-      email.classList.add('contacto_input_error');
-      errorEmail.textContent = '* El email no es valido';
+    let emailvalue = email.value;
+    if (comprobarEmail(emailvalue)) {
+      errorEmail.textContent = 'El formato del correo no es valido ej.: "ejemplo@email.com"'
+      email.classList.add('contacto_input_error')
+      return false
     } else {
-      email.classList.remove('contacto_input_error');
-      errorEmail.textContent = '';
+      email.classList.remove('contacto_input_error')
+      return true
     }
   }
   // Comprobamos que el mensaje tenga al menos 3 caracteres para poderse enviar
-  let comrobarMensaje = () => {
+  let comprobarMensaje = () => {
     if (texto.value.length < 3) {
       texto.classList.add('contacto_input_error');
       errorTexto.textContent = '* Necesito saber que es lo que quieres';
@@ -93,26 +98,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   // Comrobamos que si todo lo anterior es valido se pueda enviar el fomulario
-  let mostrarBotonEnviar = () => {
-    if (comrobarNombre && emailIncorrecto && comrobarMensaje) {
-      enviar.classList.remove('boton_enviar_disabled')
-      enviar.removeAttribute('disabled')
+  let enviarFormulario = () => {
+    comprobarMensaje();
+    if (comprobarNombre && emailIncorrecto && comrobarMensaje) {
+      axios.post(urlAirtable, {
+        fields: {
+          nombre: nombre.value,
+          email: email.value,
+          mensaje: texto.value,
+        }
+      })
     } else {
-      enviar.classList.add('boton_enviar_disabled')
-      enviar.setAttribute('disabled')
+      comprobarNombre();
+      comprobarMensaje();
+      emailIncorrecto();
     }
   }
-  let enviarFormulario = () => {
-    axios.post(urlAirtable, {
-      fields: {
-        nombre: nombre.value,
-        email: email.value,
-        mensaje: texto.value,
-      }
-    })
-  }
+  
   // Eventos
-  enviar.addEventListener('click', enviarFormulario);
+  
+  nombre.addEventListener('blur', comprobarNombre)
+  email.addEventListener('keyup', comprobarEmail)
+  email.addEventListener('blur', comprobarEmail)
+  email.addEventListener('blur', emailIncorrecto)
+  enviar.addEventListener('click', enviarFormulario)
   /// End contact
   //// End Home
 });
